@@ -1,0 +1,9 @@
+# Scene
+
+I chose to do this as I played Pokemon in my childhood and recently have picked up the game again. This scene is one that animates one of the pokemon that I particularly liked due to the fact that it had multiple evolutions and could evolve depending on the situation. The scene had Eevees and Umbreons placed around randomly surrounding the evolving Eevee as I felt that it had the most childish tone to it which reminds me of my childhood.
+
+The scene represents a simple concept of an Eevee evolving into an Umbreon. The Eevee and its shadow shrinks until it disappears and in its place an Umbreon appears. The transition from an Eevee disappearing and an Umbreon appearing should take 5 seconds each. I also have both of the meshes moving at a constant speed in a diagonal direction as if to come toward the camera. This is only applied as the mesh is transforming. I had the camera rotate about the origin as I wanted it to still see the movement of the pokemon rather than having it locked onto the pokemon which would not show translation (since there is no animatable parts on the pokemon). There are other Eevees and Umbreon around the evolving Eevee. There is a rudimentary shadow under both the evolving Eevee and the evolved Umbreon which is the use of the solid color shader.
+
+Both meshes are multishape as they both require 3 shapes to form the mesh.
+
+Finding the meshes were not particularly hard to do, it was only the part of deciding what I wanted to portray for this project. I found the meshes by searching for free obj files then on the website searching pokemon. Most of the files were not obj, they were actually FBX and DAE and Blend files. However, it wasn't difficult to find a converter online. I think that if i was looking for other specific meshes it would be much harder as they would not be as readily available as something as popular as Pokemon.
