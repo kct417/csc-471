@@ -2,7 +2,7 @@ cmake_minimum_required(VERSION 3.4)
 include("${CMAKE_SOURCE_DIR}/FindGfxLibs.cmake")
 
 # Name of the project
-project(HMlab)
+project(homework3)
 
 # Enforce use of C++14
 set(CMAKE_CXX_STANDARD_REQUIRED 14)
@@ -33,8 +33,8 @@ if(NOT WIN32)
   add_compile_options("-Wall")
   add_compile_options("-pedantic")
   add_compile_options("-Werror=return-type")
- 
-  # TODO: The following links may be uneeded. 
+
+  # TODO: The following links may be uneeded.
   if(APPLE)
     # Add required frameworks for GLFW.
     target_link_libraries(${CMAKE_PROJECT_NAME} "-framework OpenGL -framework Cocoa -framework IOKit -framework CoreVideo")
