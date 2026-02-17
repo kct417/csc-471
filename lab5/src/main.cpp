@@ -310,21 +310,23 @@ public:
             glUniform1f(curS->getUniform("MatShine"), 120.0);
             break;
         case 1:
-            // glUniform3f(curS->getUniform("MatAmb"), 0.063, 0.038, 0.1);
-            // glUniform3f(curS->getUniform("MatDif"), 0.63, 0.38, 1.0);
-            // glUniform3f(curS->getUniform("MatSpec"), 0.3, 0.2, 0.5);
-            // glUniform1f(curS->getUniform("MatShine"), 4.0);
-            // from the goblin
-            glUniform3f(curS->getUniform("MatAmb"), 0.25, 0.20, 0.07);
-            glUniform3f(curS->getUniform("MatDif"), 0.75, 0.60, 0.22);
-            glUniform3f(curS->getUniform("MatSpec"), 1.00, 0.85, 0.57);
-            glUniform1f(curS->getUniform("MatShine"), 64.0);
+            glUniform3f(curS->getUniform("MatAmb"), 0.063, 0.038, 0.1);
+            glUniform3f(curS->getUniform("MatDif"), 0.63, 0.38, 1.0);
+            glUniform3f(curS->getUniform("MatSpec"), 0.3, 0.2, 0.5);
+            glUniform1f(curS->getUniform("MatShine"), 4.0);
             break;
         case 2:
             glUniform3f(curS->getUniform("MatAmb"), 0.004, 0.05, 0.09);
             glUniform3f(curS->getUniform("MatDif"), 0.04, 0.5, 0.9);
             glUniform3f(curS->getUniform("MatSpec"), 0.02, 0.25, 0.45);
             glUniform1f(curS->getUniform("MatShine"), 27.9);
+            break;
+        case 3:
+            // from the goblin
+            glUniform3f(curS->getUniform("MatAmb"), 0.25, 0.20, 0.07);
+            glUniform3f(curS->getUniform("MatDif"), 0.75, 0.60, 0.22);
+            glUniform3f(curS->getUniform("MatSpec"), 1.00, 0.85, 0.57);
+            glUniform1f(curS->getUniform("MatShine"), 64.0);
             break;
         }
     }
@@ -411,7 +413,7 @@ public:
                 Model->pushMatrix();
                 Model->translate(vec3(off + sp * i, -1, off + sp * j));
                 Model->scale(vec3(0.85, 0.85, 0.85));
-                SetMaterial(prog, (i + j) % 3);
+                SetMaterial(prog, (i + j) % 4);
                 glUniformMatrix4fv(prog->getUniform("M"), 1, GL_FALSE, value_ptr(Model->topMatrix()));
                 theBunny->draw(prog);
                 Model->popMatrix();
