@@ -11,13 +11,13 @@ out vec3 fragNor;
 
 void main() {
 
-  vec4 vPosition;
+    vec4 vPosition;
 
-  /* First model transforms */
-  gl_Position = P * V *M * vec4(vertPos.xyz, 1.0);
+    /* First model transforms */
+    gl_Position = P * V * M * vec4(vertPos.xyz, 1.0);
 
-  fragNor = (M * vec4(vertNor, 0.0)).xyz;
+    fragNor = (M * vec4(vertNor, 0.0)).xyz;
 
-  /* pass through the texture coordinates to be interpolated */
-  vTexCoord = vertTex;
+    /* pass through the texture coordinates to be interpolated */
+    vTexCoord = vertTex;
 }

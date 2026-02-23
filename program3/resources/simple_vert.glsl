@@ -12,11 +12,10 @@ out vec3 fragNor;
 out vec3 lightDir;
 out vec3 EPos;
 
-void main()
-{
-	gl_Position = P * V * M * vertPos;
-	//update these as needed
-	fragNor = (M * vec4(vertNor, 0.0)).xyz; 
-	lightDir = lightPos - (M*vertPos).xyz;
-	EPos = (M*vertPos).xyz;
+void main() {
+    gl_Position = P * V * M * vertPos;
+    //update these as needed
+    fragNor = (M * vec4(vertNor, 0.0)).xyz;
+    lightDir = lightPos - (M * vertPos).xyz;
+    EPos = (M * vertPos).xyz;
 }
