@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# Usage: source build.sh <project>
+# Usage: build.sh <project>
 
 source setenv.sh
 cd $1
