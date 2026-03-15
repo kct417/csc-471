@@ -1258,8 +1258,6 @@ public:
 
         glDepthMask(GL_FALSE);
         glDisable(GL_DEPTH_TEST);
-        glEnable(GL_POLYGON_OFFSET_FILL);
-        glPolygonOffset(-1.0, -1.0);
 
         shadowProg->bind();
         Model->pushMatrix();
@@ -1275,7 +1273,6 @@ public:
 
         glDepthMask(GL_TRUE);
         glEnable(GL_DEPTH_TEST);
-        glDisable(GL_POLYGON_OFFSET_FILL);
 
         // Draw the doggos
         texProg->bind();
