@@ -682,7 +682,7 @@ public:
                 {
                     Model->pushMatrix();
 
-                    Model->translate(vec3(0, 1, 0));
+                    Model->translate(vec3(0, 0.8, 0));
                     Model->rotate(glm::radians(angle), vec3(0, 1, 0));
                     Model->rotate(glm::radians(-90.0f), vec3(1, 0, 0));
 
@@ -829,16 +829,36 @@ public:
             MatShine = 16.0f;
             break;
         case BULBASAUR:
-            MatAmb = vec3(0.02f, 0.03f, 0.02f) * (0.8f + rAmb * 0.2f);
-            MatDif = vec3(0.2f, 0.6f, 0.4f) * (0.8f + rDif * 0.2f);
-            MatSpec = vec3(0.15f, 0.2f, 0.15f) * (0.8f + rSpec * 0.2f);
-            MatShine = 20.0f;
+            if (toggleMaterial)
+            {
+                MatAmb = vec3(0.12f, 0.14f, 0.05f);
+                MatDif = vec3(0.74f, 0.88f, 0.20f);
+                MatSpec = vec3(0.35f, 0.40f, 0.15f);
+                MatShine = 32.0f;
+            }
+            else
+            {
+                MatAmb = vec3(0.02f, 0.03f, 0.02f) * (0.8f + rAmb * 0.2f);
+                MatDif = vec3(0.2f, 0.6f, 0.4f) * (0.8f + rDif * 0.2f);
+                MatSpec = vec3(0.15f, 0.2f, 0.15f) * (0.8f + rSpec * 0.2f);
+                MatShine = 20.0f;
+            }
             break;
         case DITTO:
-            MatAmb = vec3(0.03f, 0.02f, 0.04f) * (0.8f + rAmb * 0.2f);
-            MatDif = vec3(0.8f, 0.6f, 0.9f) * (0.8f + rDif * 0.2f);
-            MatSpec = vec3(0.25f, 0.2f, 0.3f) * (0.8f + rSpec * 0.2f);
-            MatShine = 20.0f;
+            if (toggleMaterial)
+            {
+                MatAmb = vec3(0.06f, 0.09f, 0.12f);
+                MatDif = vec3(0.42f, 0.67f, 0.90f);
+                MatSpec = vec3(0.40f, 0.50f, 0.60f);
+                MatShine = 40.0f;
+            }
+            else
+            {
+                MatAmb = vec3(0.03f, 0.02f, 0.04f) * (0.8f + rAmb * 0.2f);
+                MatDif = vec3(0.8f, 0.6f, 0.9f) * (0.8f + rDif * 0.2f);
+                MatSpec = vec3(0.25f, 0.2f, 0.3f) * (0.8f + rSpec * 0.2f);
+                MatShine = 20.0f;
+            }
             break;
         case EEVEE:
             if (toggleMaterial)
@@ -857,28 +877,68 @@ public:
             }
             break;
         case LUCARIO:
-            MatAmb = vec3(0.05f, 0.05f, 0.05f) * (0.8f + rAmb * 0.2f);
-            MatDif = vec3(0.0f, 0.4f, 0.6f) * (0.8f + rDif * 0.2f);
-            MatSpec = vec3(0.6f, 0.6f, 0.65f) * (0.8f + rSpec * 0.2f);
-            MatShine = 64.0f;
+            if (toggleMaterial)
+            {
+                MatAmb = vec3(0.12f, 0.10f, 0.04f);
+                MatDif = vec3(0.88f, 0.76f, 0.18f);
+                MatSpec = vec3(0.55f, 0.55f, 0.35f);
+                MatShine = 64.0f;
+            }
+            else
+            {
+                MatAmb = vec3(0.05f, 0.05f, 0.05f) * (0.8f + rAmb * 0.2f);
+                MatDif = vec3(0.0f, 0.4f, 0.6f) * (0.8f + rDif * 0.2f);
+                MatSpec = vec3(0.6f, 0.6f, 0.65f) * (0.8f + rSpec * 0.2f);
+                MatShine = 64.0f;
+            }
             break;
         case MEW:
-            MatAmb = vec3(0.2f, 0.15f, 0.2f) * (0.8f + rAmb * 0.2f);
-            MatDif = vec3(1.0f, 0.8f, 0.9f) * (0.8f + rDif * 0.2f);
-            MatSpec = vec3(0.5f, 0.5f, 0.5f) * (0.8f + rSpec * 0.2f);
-            MatShine = 64.0f;
+            if (toggleMaterial)
+            {
+                MatAmb = vec3(0.15f, 0.18f, 0.22f);
+                MatDif = vec3(0.60f, 0.78f, 0.92f);
+                MatSpec = vec3(0.50f, 0.60f, 0.70f);
+                MatShine = 64.0f;
+            }
+            else
+            {
+                MatAmb = vec3(0.2f, 0.15f, 0.2f) * (0.8f + rAmb * 0.2f);
+                MatDif = vec3(1.0f, 0.8f, 0.9f) * (0.8f + rDif * 0.2f);
+                MatSpec = vec3(0.5f, 0.5f, 0.5f) * (0.8f + rSpec * 0.2f);
+                MatShine = 64.0f;
+            }
             break;
         case SNORLAX:
-            MatAmb = vec3(0.02f, 0.02f, 0.03f) * (0.8f + rAmb * 0.2f);
-            MatDif = vec3(0.15f, 0.3f, 0.45f) * (0.8f + rDif * 0.2f);
-            MatSpec = vec3(0.2f, 0.25f, 0.3f) * (0.8f + rSpec * 0.2f);
-            MatShine = 16.0f;
+            if (toggleMaterial)
+            {
+                MatAmb = vec3(0.02f, 0.04f, 0.06f);
+                MatDif = vec3(0.08f, 0.25f, 0.45f);
+                MatSpec = vec3(0.25f, 0.30f, 0.35f);
+                MatShine = 32.0f;
+            }
+            else
+            {
+                MatAmb = vec3(0.02f, 0.02f, 0.03f) * (0.8f + rAmb * 0.2f);
+                MatDif = vec3(0.15f, 0.3f, 0.45f) * (0.8f + rDif * 0.2f);
+                MatSpec = vec3(0.2f, 0.25f, 0.3f) * (0.8f + rSpec * 0.2f);
+                MatShine = 16.0f;
+            }
             break;
         case UMBREON:
-            MatAmb = vec3(0.05f, 0.05f, 0.05f) * (0.8f + rAmb * 0.2f);
-            MatDif = vec3(0.05f, 0.05f, 0.05f) * (0.8f + rDif * 0.2f);
-            MatSpec = vec3(0.2f, 0.25f, 0.3f) * (0.8f + rSpec * 0.2f);
-            MatShine = 32.0f;
+            if (toggleMaterial)
+            {
+                MatAmb = vec3(0.05f, 0.05f, 0.08f);
+                MatDif = vec3(0.08f, 0.10f, 0.18f);
+                MatSpec = vec3(0.30f, 0.45f, 0.80f);
+                MatShine = 64.0f;
+            }
+            else
+            {
+                MatAmb = vec3(0.05f, 0.05f, 0.05f) * (0.8f + rAmb * 0.2f);
+                MatDif = vec3(0.05f, 0.05f, 0.05f) * (0.8f + rDif * 0.2f);
+                MatSpec = vec3(0.2f, 0.25f, 0.3f) * (0.8f + rSpec * 0.2f);
+                MatShine = 32.0f;
+            }
             break;
         default:
             MatAmb = vec3(0.2f) * (0.8f + rAmb * 0.2f);
@@ -1191,6 +1251,32 @@ public:
         Projection->pushMatrix();
         Projection->perspective(45.0f, aspect, 0.01f, 150.0f);
 
+        texProg->bind();
+        glUniform1i(texProg->getUniform("flip"), 1);
+        drawGround(texProg);
+        texProg->unbind();
+
+        glDepthMask(GL_FALSE);
+        glDisable(GL_DEPTH_TEST);
+        glEnable(GL_POLYGON_OFFSET_FILL);
+        glPolygonOffset(-1.0, -1.0);
+
+        shadowProg->bind();
+        Model->pushMatrix();
+        glUniformMatrix4fv(shadowProg->getUniform("P"), 1, GL_FALSE, value_ptr(Projection->topMatrix()));
+        SetView(shadowProg);
+        SetLight(shadowProg);
+        Model->translate(vec3(0.0f, g_groundY - 1.7f, 0.0f));
+        Model->scale(vec3(1.0f, 0.0f, 1.0f));
+        drawHierModel(Model, shadowProg);
+        drawWorld(shadowProg, Model);
+        Model->popMatrix();
+        shadowProg->unbind();
+
+        glDepthMask(GL_TRUE);
+        glEnable(GL_DEPTH_TEST);
+        glDisable(GL_POLYGON_OFFSET_FILL);
+
         // Draw the doggos
         texProg->bind();
         glUniformMatrix4fv(texProg->getUniform("P"), 1, GL_FALSE, value_ptr(Projection->topMatrix()));
@@ -1217,9 +1303,6 @@ public:
         drawHierModel(Model, texProg);
         Model->popMatrix();
 
-        glUniform1i(texProg->getUniform("flip"), 1);
-        drawGround(texProg);
-
         texProg->unbind();
 
         // use the material shader
@@ -1243,19 +1326,6 @@ public:
         particleSystem->drawMe(partProg);
         particleSystem->update(frametime);
         partProg->unbind();
-
-        shadowProg->bind();
-        Model->pushMatrix();
-        glUniformMatrix4fv(shadowProg->getUniform("P"), 1, GL_FALSE, value_ptr(Projection->topMatrix()));
-        SetView(shadowProg);
-        SetLight(shadowProg);
-        glUniform3f(shadowProg->getUniform("lightPos"), 0.0f - lightTransX, 0.0f + lightTransY, 0.0f + lightTransZ);
-        Model->translate(vec3(0.0f, g_groundY - 1.7f, 0.0f));
-        Model->scale(vec3(1.0f, 0.0f, 1.0f));
-        drawHierModel(Model, shadowProg);
-        drawWorld(shadowProg, Model);
-        Model->popMatrix();
-        shadowProg->unbind();
 
         // shadowProg->bind();
         // glUniformMatrix4fv(shadowProg->getUniform("P"), 1, GL_FALSE, value_ptr(Projection->topMatrix()));
