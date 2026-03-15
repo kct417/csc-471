@@ -1,11 +1,47 @@
-For this project I spent some time trying to port the previous project into this project. Thus the scene is esentially the same with different textures for the various models.
+Pokemon Forest
 
-Movement was implemented for the wasd keys to properly move the camera with the view of the camera. the pitch and yaw were implemented and vertical yaw was clamped to 80 degrees in either direction up or down.
+This project is based on the Pokemon game and takes inspiration from
+the mysterious Eterna forest found in the Pokemon
+Diamond/Pearl/Platinum and its successor series.
 
-The hierarchical model used a mapped texture which was a cartoon wood texture and the skybox and grass were replaced with anime versioned textures.
+# Usage
 
-Point lighting was used in this projected and can be moved with the q and e keys as with previous labs. This goes with my idea that I would like to progress in my final project of lighting that seeps through a forest of trees. The materials are progressing toward my goal of creating a Pokemon forest themed scene.
+- Compile the code in a build directory using CMake
+- Run the finalproject executable that is created
 
-There is a cinematic tour of the scene when pressing g which circles around the skybox with varying elevations.
+# Implementation Details
 
-I was working on collision detection for this project but unfortunately I was unable to finish it. Therefore, there are traces of code which are there from my incomplete implementation. I am also planning to use mtl to texture my Pokemon models but have not had time to do so yet.
+![Forest](images/forest.jpg)
+The project features a 3D environment with a forest setting, where
+each mesh is mapped to a world tile space. The player can navigate
+through the forest, encountering various Pokemon.
+![Particles](images/particles.jpg)
+The project also includes a particle system that adds visual effects
+to the environment, enhancing the overall experience. The particles
+are spread throughout the forest, creating a dynamic and lively
+atmosphere as players explore the area.
+![Shadows](images/shadows.jpg)
+Shadows are implemented to create a more immersive and realistic
+environment, allowing players to see the effects of light and shadow
+as they explore the forest. Depth testing is disabled to ensure that
+the shadows are rendered correctly, even when they overlap with
+other objects in the scene.
+![Shiny pokemon](images/shiny.jpg)
+The project also includes shiny Pokemon, which are rare variants of
+regular Pokemon with different color schemes. The Pokemon can be
+toggled to turn into shiny versions using the M key.
+![Lighting](images/light.jpg)
+The project features dynamic lighting that enhances the visual
+appeal of the environment. The lighting can be moved in the y
+direction using the Q and E keys, in the x direction using the left
+and right arrow keys, and in the z direction using the up and down
+arrow keys. This allows players to create different lighting effects
+and moods as they explore the forest.
+![Figure](images/figure.jpg)
+The wooden figure can be toggled to animate a run in place as well
+as a wave using the X key.
+
+# References
+
+- [Depth testing](https://learnopengl.com/Advanced-OpenGL/Depth-testing)
+- [Shiny pokemon](https://pokemondb.net/pokedex/shiny)
