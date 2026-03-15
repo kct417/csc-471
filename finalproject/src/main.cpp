@@ -1256,7 +1256,6 @@ public:
         drawGround(texProg);
         texProg->unbind();
 
-        glDepthMask(GL_FALSE);
         glDisable(GL_DEPTH_TEST);
 
         shadowProg->bind();
@@ -1271,7 +1270,6 @@ public:
         Model->popMatrix();
         shadowProg->unbind();
 
-        glDepthMask(GL_TRUE);
         glEnable(GL_DEPTH_TEST);
 
         // Draw the doggos
